@@ -1,6 +1,6 @@
 'use strict'
 
-const getInfos =  async (username, pageNumber) => {
+const getUsers =  async (username, pageNumber) => {
     let user = username
     let page = pageNumber
 
@@ -13,5 +13,5 @@ const getInfos =  async (username, pageNumber) => {
 }
 
 export {
-    getInfos
+    getUsers
 }

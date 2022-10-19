@@ -1,6 +1,6 @@
 'use strict'
 
-import { getInfos } from "../../fetch.js"
+import { getUsers } from "../js/fetchUsers.js"
 import { createDiv, createImg, createSpan } from "./utils/createElements.js"
 // var username = document.getElementById('username').value
 // var infoData = await getInfos(username) // Essa linha dá o erro *** VM762:1 Uncaught SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON ***
@@ -12,7 +12,7 @@ import { createDiv, createImg, createSpan } from "./utils/createElements.js"
 let pageNumber = 1
 const createCards =  async () => {
     let username = document.getElementById('username').value
-    var infoData = await getInfos(username, pageNumber)
+    var infoData = await getUsers(username, pageNumber)
 
     infoData.items.forEach(element => {
         const container = document.querySelector('main')
