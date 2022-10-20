@@ -17,13 +17,24 @@ const createCards =  async () => {
 
     infoData.items.forEach(element => {
         const container = document.querySelector('.content-container')
-        const card = createDiv('user-card')
+        const card = createDiv('user-card', element.login.toLowerCase())
         const usernameText = createSpan('user-name', element.login)
         const userIcon = createImg('user-icon', element.avatar_url)
 
         card.appendChild(userIcon)
         card.appendChild(usernameText)
         container.appendChild(card)
+
+        card.addEventListener('click', (e) => {
+            e.preventDefault()
+
+            const user = card.id
+
+            localStorage.setItem('user', user)
+
+            location.href = './assets/pages/user.html'
+        })
+
     });
 }
 
