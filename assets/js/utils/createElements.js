@@ -23,8 +23,18 @@ const createSpan = (className, textContent) => {
     return span
 }
 
+const createLink = (className, textContent, href) => {
+    const a = document.createElement('a')
+    a.classList.add(className)
+    a.textContent = textContent
+    a.href = href
+
+    return a
+}
+
 export { 
     createDiv, 
     createImg, 
-    createSpan
+    createSpan,
+    createLink
 }
