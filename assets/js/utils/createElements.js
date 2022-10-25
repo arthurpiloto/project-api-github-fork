@@ -28,6 +28,7 @@ const createLink = (className, textContent, href) => {
     a.classList.add(className)
     a.textContent = textContent
     a.href = href
+    a.target = '_blank'
 
     return a
 }
