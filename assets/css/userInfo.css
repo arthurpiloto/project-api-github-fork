@@ -10,3 +10,8 @@ main {
     flex-direction: column;
     height: 100%;
 }
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
