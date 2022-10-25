@@ -17,3 +17,8 @@ const getUserInfoRepos = async (username) => {
 
     return data
 }
+
+export {
+    getUserInfo,
+    getUserInfoRepos
+}
