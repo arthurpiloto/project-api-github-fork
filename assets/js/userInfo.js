@@ -15,13 +15,13 @@ const createRepos = (json) => {
 
     json.forEach(element => {
         const reposName = createSpan('repos-name', `Repositório: ${element.name}`)
-        const reposPrefixo = createSpan('repos-prefixo', `Link do repositório: `)
+        const reposPrefix = createSpan('repos-prefixo', `Link do repositório: `)
         const reposLink = createLink('repos-link', `${element.html_url}`, element.html_url)
-        const containerLink = createDiv(`container-link`)
-        containerLink.appendChild(reposPrefixo)
-        containerLink.appendChild(reposLink)
+        const linkContainer = createDiv(`container-link`)
+        linkContainer.appendChild(reposPrefix)
+        linkContainer.appendChild(reposLink)
         reposContainer.appendChild(reposName)
-        reposContainer.appendChild(containerLink)
+        reposContainer.appendChild(linkContainer)
         contentContainer.appendChild(reposContainer)
     });
 }
@@ -29,7 +29,22 @@ const createRepos = (json) => {
 createRepos(userInfoRepos)
 
 const createProfile = (json) => {
-    
+    const contentContainer = document.querySelector('.content-container')
+    const profileContainer = document.querySelector('.profile-container')
+
+    const userIcon = createImg('user-icon', json.avatar_url)
+    const creationDate = createSpan('creation-date', `Data de criação: ${json.created_at}`)
+    const followers = createSpan('user-followers', `Seguidores: ${json.followers}`)
+    const following = createSpan('user-following', `Seguindo: ${json.following}`)
+    const bio = createSpan('user-bio', `Bio: ${json.bio}`)
+
+    profileContainer.appendChild(userIcon)
+    profileContainer.appendChild(creationDate)
+    profileContainer.appendChild(followers)
+    profileContainer.appendChild(following)
+    profileContainer.appendChild(bio)
+
+    contentContainer.appendChild(profileContainer)
 }
 
-// createProfile(userInfo)
+createProfile(userInfo)
