@@ -33,10 +33,12 @@ createRepos(userInfoRepos)
 const createProfile = (json) => {
     const contentContainer = document.querySelector('.content-container')
     const profileContainer = document.querySelector('.profile-container')
-    console.log(json.created_at);
+    
+    let date = new Date(json.created_at)
+    let formatedDate = date.toLocaleDateString()
 
     const userIcon = createImg('user-icon', json.avatar_url)
-    const creationDate = createSpan('creation-date', `Data de criação: ${json.created_at}`)
+    const creationDate = createSpan('creation-date', `Data de criação: ${formatedDate}`)
     const followers = createSpan('user-followers', `Seguidores: ${json.followers}`)
     const following = createSpan('user-following', `Seguindo: ${json.following}`)
     
