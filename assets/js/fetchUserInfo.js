@@ -1,7 +1,7 @@
 const getUserInfo = async (username) => {
     const user = username
 
-    const url = `http://api.github.com/users/${user}`
+    const url = `https://api.github.com/users/${user}`
     const response = await fetch(url)
     const data = await response.json()
 
@@ -11,7 +11,7 @@ const getUserInfo = async (username) => {
 const getUserInfoRepos = async (username) => {
     const user = username
 
-    const url = `http://api.github.com/users/${user}/repos`
+    const url = `https://api.github.com/users/${user}/repos`
     const response = await fetch(url)
     const data = await response.json()
 
