@@ -1,3 +1,7 @@
+body {
+    background-color: var(--background-color);
+}
+
 main {
     display: flex;
     align-items: center;
@@ -9,19 +13,42 @@ main {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    /* background-color: tomato; */
 }
 .repos-container {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 600px;
+    overflow: scroll;
+    gap: 20px;
+}
+.repos-container::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 4px;
+  }
+  
+.repos-container::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+.repos-name {
+    color: var(--strong-color);
 }
 .profile-container {
     display: flex;
     flex-direction: column;
     height: 100%;
+    max-width: 420px;
+    gap: 10px;
 }
 .user-icon {
     height: 400px;
     width: 400px;
+    border: solid 2px var(--strong-color);
+    border-radius: 10px;
+}
+
+footer {
+    height: 50px;
 }
