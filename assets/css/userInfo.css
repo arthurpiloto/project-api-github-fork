@@ -1,9 +1,15 @@
 main {
     display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
 }
 .content-container {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    /* background-color: tomato; */
 }
 .repos-container {
     display: flex;
