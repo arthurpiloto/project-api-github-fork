@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: var(--background-color);
+}
+
 /* ESTILIZAÇÃO DO HEADER */
 
 header {
@@ -17,7 +21,7 @@ header {
 
 .input-container {
     width: 65%;
-    /* background-color: aqua; */
+    /* background-color: var(--background-color); */
 
     display: flex;
     justify-content: center;
@@ -25,7 +29,7 @@ header {
     padding: 12px;
     gap: 8px;
 
-    border: solid 5px #C4C4C4;
+    border: solid 5px var(--strong-color);
     border-radius: 15px;
 }
 
@@ -37,6 +41,7 @@ header {
     padding: 5px;
     width: 90%;
     border: none;
+    background-color: var(--background-color);
 }
 #username:focus {
     border: none;
@@ -47,7 +52,7 @@ header {
 
 /**********************************************************/
 
-/* ESTILIZAÇÃO DO HEADER */
+/* ESTILIZAÇÃO DO MAIN */
 
 main {
     display: flex;
@@ -76,16 +81,40 @@ main {
     width: 270px;
     padding: 65px;
     gap: 30px;
-    background-color: #C4C4C4;
+    /* border: solid 2px var(--light-color); */
+    border-radius: 10px;
+    transition: ease 0.7s;
+    box-shadow: 8px 8px 12px #0D0D0D90;
+    background-color: var(--light-color);
+}
+.user-card:hover {
+    transform: scale(1.08);
 }
 .user-icon {
     height: 150px;
     width: 150px;
+    border: solid 2px var(--strong-color);
+    border-radius: 10px;
     background-color: black;
 }
+.user-name {
+    color: #FFF;
+}
 
-/* ESTILIZAÇÃO DO HEADER */
+/* ESTILIZAÇÃO DO MAIN */
 
 footer {
-    height: 50px;
+    height: 80px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: tomato; */
+}
+#button {
+    background-color: var(--default-color);
+    color: var(--background-color);
+    border: solid 2px var(--strong-color);
+    border-radius: 10px;
+    padding: 10px;
 }
