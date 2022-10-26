@@ -12,10 +12,12 @@ body {
 
 header {
     height: 120px;
-    padding: 30px;
+    padding: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    /* margin-left: 80px; */
+    /* margin-right: 80px; */
     /* background-color: tomato; */
 }
 
@@ -63,6 +65,7 @@ main {
     flex-direction: column;
     flex-grow: 1;
     align-items: center;
+    margin-top: 25px;
     margin-bottom: 30px;
 }
 
