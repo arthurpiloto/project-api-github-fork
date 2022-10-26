@@ -20,6 +20,7 @@ main {
     height: 600px;
     overflow: scroll;
     gap: 20px;
+    font-size: 1.2rem;
 }
 .repos-container::-webkit-scrollbar {
     -webkit-appearance: none;
@@ -31,9 +32,9 @@ main {
     background-color: rgba(0, 0, 0, .5);
     box-shadow: 0 0 1px rgba(255, 255, 255, .5);
 }
-
-.repos-name {
-    color: var(--strong-color);
+.repos-link {
+    color: var(--default-color);
+    /* font-size: 1.2rem; */
 }
 .profile-container {
     display: flex;
@@ -41,6 +42,7 @@ main {
     height: 100%;
     max-width: 420px;
     gap: 10px;
+    font-size: 1.2rem;
 }
 .user-icon {
     height: 400px;
@@ -49,6 +51,24 @@ main {
     border-radius: 10px;
 }
 
+/* FOOTER */
+
 footer {
-    height: 50px;
+    height: 80px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: tomato; */
+}
+#back-button {
+    background-color: var(--default-color);
+    border: solid 2px var(--strong-color);
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+#back-button a {
+    color: var(--background-color);
+    font-size: 1.2rem;
 }
