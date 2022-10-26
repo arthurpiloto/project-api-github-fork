@@ -2,11 +2,25 @@ body {
     background-color: var(--background-color);
 }
 
+header {
+    height: 150px;
+    display: flex;
+    padding-top: 80px;
+    padding-left: 300px;
+    align-items: center;
+    gap: 20px;
+    /* background-color: tomato; */
+}
+.github-logo {
+    height: 89px;
+    width: 89px;
+}
+
 main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    flex-grow: 1;
 }
 .content-container {
     display: flex;
