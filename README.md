@@ -21,6 +21,4 @@
 
 ## Mobile Images
 
-<img src="./assets/images/readme-imgs/mobile1.png" height="500px"></img>
-
-<img src="./assets/images/readme-imgs/mobile2.png" height="500px"></img>
+<img src="./assets/images/readme-imgs/mobile1.png" height="500px"></img> <img src="./assets/images/readme-imgs/mobile2.png" height="500px"></img>
