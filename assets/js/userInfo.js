@@ -41,15 +41,17 @@ const createProfile = (json) => {
     const creationDate = createSpan('creation-date', `Data de criação: ${formatedDate}`)
     const followers = createSpan('user-followers', `Seguidores: ${json.followers}`)
     const following = createSpan('user-following', `Seguindo: ${json.following}`)
+    const userData = createDiv('user-data')
     
     profileContainer.appendChild(userIcon)
-    profileContainer.appendChild(creationDate)
-    profileContainer.appendChild(followers)
-    profileContainer.appendChild(following)
+    userData.appendChild(creationDate)
+    userData.appendChild(followers)
+    userData.appendChild(following)
     if(json.bio != null) {
         const bio = createSpan('user-bio', `Bio: ${json.bio}`)
-        profileContainer.appendChild(bio)
+        userData.appendChild(bio)
     }
+    profileContainer.appendChild(userData)
 
     contentContainer.appendChild(profileContainer)
 }
