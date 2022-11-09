@@ -129,3 +129,55 @@ footer {
     font-size: 1.2rem;
     cursor: pointer;
 }
+
+@media (max-width: 1075px) {
+    /* ESTILIZAÇÃO DO HEADER */
+
+    header {
+        gap: 20px;
+    }
+
+    /**********************************************************/
+
+    /* ESTILIZAÇÃO DO MAIN */
+
+    .content-container {
+        height: fit-content;
+        gap: 40px;
+    }
+
+    .user-card {
+        height: 260px;
+        width: 170px;
+        gap: 24px;
+        transition: none;
+    }
+
+    .user-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .user-icon {
+        height: 130px;
+        width: 130px;
+    }
+}
+
+@media (max-width: 425px) {
+    /* ESTILIZAÇÃO DO HEADER */
+
+    header {
+        padding: 30px;
+    }
+
+    .input-container {
+        width: 100%;
+    }
+    
+    .header-image {
+        display: none;
+    }
+
+    /**********************************************************/
+}

@@ -5,11 +5,17 @@ body {
 header {
     height: 150px;
     display: flex;
-    padding-top: 80px;
-    padding-left: 300px;
+    justify-content: center;
     align-items: center;
     gap: 20px;
     /* background-color: tomato; */
+}
+.link-container {
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 .github-logo {
     height: 89px;
@@ -20,6 +26,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 24px;
     flex-grow: 1;
 }
 .content-container {
@@ -54,7 +61,6 @@ main {
     display: flex;
     flex-direction: column;
     height: 100%;
-    max-width: 420px;
     gap: 10px;
     font-size: 1.2rem;
 }
@@ -63,6 +69,12 @@ main {
     width: 400px;
     border: solid 2px var(--strong-color);
     border-radius: 10px;
+}
+.user-data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;    
 }
 
 /* FOOTER */
@@ -85,4 +97,117 @@ footer {
 #back-button a {
     color: var(--background-color);
     font-size: 1.2rem;
+}
+
+
+@media (max-width: 1075px) {
+    /* ESTILIZAÇÃO DO MAIN */
+
+    main {
+        padding: 0;
+    }
+
+    .content-container {
+        width: 80%;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 1000px) {
+    /* ESTILIZAÇÃO DO HEADER */
+
+    header {
+        height: 100px;
+        padding-top: 12px;
+    }
+
+    .github-logo {
+        height: 70px;
+        width: 70px;
+    }
+
+    .github-name {
+        height: 50px;
+    }
+
+    /**********************************************************/
+
+    /* ESTILIZAÇÃO DO MAIN */
+
+    main {
+        padding: 12px;
+    }
+
+    .content-container {
+        flex-direction: column-reverse;
+    }
+
+    .profile-container {
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .user-data {
+        max-width: 335px;
+    }
+
+    .user-icon {
+        height: 330px;
+        width: 330px;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* ESTILIZAÇÃO DO HEADER */
+
+    header {
+        height: 80px;
+        padding-top: 8px;
+    }
+
+    .github-logo {
+        height: 50px;
+        width: 50px;
+    }
+
+    .github-name {
+        height: 30px;
+    }
+
+    /**********************************************************/
+    
+    /* ESTILIZAÇÃO DO MAIN */
+
+    main {
+        padding: 8px;
+        flex-grow: 0;
+    }
+
+    .content-container {
+        flex-direction: column-reverse;
+    }
+
+    .profile-container {
+        align-items: center;
+        flex-direction: row;
+        font-size: 1rem;
+    }
+
+    .user-data {
+        max-width: 400px;
+    }
+
+    .user-icon {
+        height: 230px;
+        width: 230px;
+    }
+
+    .repos-container {
+        font-size: 1rem;
+    }
 }
